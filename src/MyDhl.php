@@ -1,8 +1,9 @@
 <?php
 
+
 namespace Cubes\MyDhl;
 
-use CodeDredd\Soap\Facades\Soap;
+use Cubes\MyDhl\RateRequest\RateRequest;
 
 class MyDhl
 {
@@ -10,9 +11,18 @@ class MyDhl
 
     public function __construct($basePath, $username, $password) 
     {
-        $this->client = Soap::baseWsdl($basePath)->withWsse([
-            'userTokenName' => $username,
-            'userTokenPassword' => $password,
-        ]);
+        $wsseHeader = new WsseAuthHeader($username, $password);
+
+        $this->client = 
+            (new \SoapClient($basePath))
+                ->__setSoapHeaders([
+                    $wsseHeader
+                ])
+        ;
+    }
+
+    public function rateRequest(RateRequest $request)
+    {
+        return $this->client->RateRequest($request);
     }
 }
