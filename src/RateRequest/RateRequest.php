@@ -9,9 +9,9 @@ class RateRequest
     public $RequestedShipment;
 
     public function __construct(
-        $ClientDetail,
-        $Request,
-        $RequestedShipment
+        Request $Request,
+        RequestedShipment $RequestedShipment,
+        ClientDetail $ClientDetail = null
     ) {
         $this->ClientDetail = $ClientDetail;
         $this->Request = $Request;
