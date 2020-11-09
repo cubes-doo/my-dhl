@@ -7,20 +7,51 @@ use Cubes\MyDhl\RateRequest\RateRequest;
 
 class MyDhl
 {
-    public $client;
+    protected $basePath;
+    protected $username;
+    protected $password;
+    protected $debug;
 
-    public function __construct($basePath, $username, $password) 
+    public function __construct(
+        $basePath, 
+        $username, 
+        $password, 
+        $debug = true
+    ) {
+        $this->basePath = $basePath; 
+        $this->username = $username; 
+        $this->password = $password; 
+        $this->debug = $debug;
+    }
+
+    protected function make($url)
     {
-        $wsseHeader = new WsseAuthHeader($username, $password);
+        $wsseHeader = 
+            new WsseAuthHeader(
+                $this->username, 
+                $this->password
+            )
+        ;
 
-        $this->client = (new \SoapClient($basePath));
-        $this->client->__setSoapHeaders([
+        $options = null;
+        if($this->debug) {
+            $options = [
+                'trace'     => 1,
+                'exception' => 1,
+            ];
+        }
+
+        $client = (new \SoapClient($this->basePath . $url . '?WSDL', $options));
+        $client->__setSoapHeaders([
             $wsseHeader
-        ]);
+        ]); 
+
+        return $client;
     }
 
     public function rateRequest(RateRequest $request)
     {
-        return $this->client->RateRequest($request);
+        $client = $this->make('expressRateBook');
+        return $client->getRateRequest($request);
     }
 }
