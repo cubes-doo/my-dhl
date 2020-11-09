@@ -49,9 +49,52 @@ class MyDhl
         return $client;
     }
 
+    protected function log(\SoapClient $client, \SoapFault $fault = null)
+    {
+        if(!$this->debug || !function_exists('logger')) {
+            return;
+        }
+        
+        if(!empty($fault)) {
+            logger('!!! SoapFault:');
+            logger($fault->getMessage());
+        }
+        
+        logger('$client->__getLastRequestHeaders()');
+        logger($client->__getLastRequestHeaders());
+        logger('$client->__getLastRequest()');
+        $this->logXml($client->__getLastRequest());
+        logger('$client->__getLastResponseHeaders()');
+        logger($client->__getLastResponseHeaders());
+        logger('$client->__getLastResponse()');
+        $this->logXml($client->__getLastResponse());
+    }
+
+    protected function logXml($xml = null)
+    {
+        if(empty($xml)) {
+            return;
+        }
+        
+        $dom = new \DOMDocument();
+        $dom->preserveWhiteSpace = FALSE;
+        $dom->loadXML($xml);
+        $dom->formatOutput = TRUE;
+        logger("\n" . $dom->saveXML());
+    }
+
     public function rateRequest(RateRequest $request)
     {
         $client = $this->make('expressRateBook');
-        return $client->getRateRequest($request);
+
+        try {
+            $res = $client->getRateRequest($request);
+            $this->log($client);
+        } catch (\SoapFault $s) {
+            $this->log($client, $s);
+            throw new \Exception('SoapFault: ' . $s->getMessage());
+        }
+        
+        return $res;
     }
 }
