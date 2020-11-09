@@ -7,18 +7,16 @@ use Cubes\MyDhl\RateRequest\RateRequest;
 
 class MyDhl
 {
-    protected $client;
+    public $client;
 
     public function __construct($basePath, $username, $password) 
     {
         $wsseHeader = new WsseAuthHeader($username, $password);
 
-        $this->client = 
-            (new \SoapClient($basePath))
-                ->__setSoapHeaders([
-                    $wsseHeader
-                ])
-        ;
+        $this->client = (new \SoapClient($basePath));
+        $this->client->__setSoapHeaders([
+            $wsseHeader
+        ]);
     }
 
     public function rateRequest(RateRequest $request)
