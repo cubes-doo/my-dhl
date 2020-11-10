@@ -14,9 +14,9 @@ class RequestedPackage
     public $Dimensions;
 
     public function __construct(
-        $PackageTypeCode,
         Weight $Weight,
-        Dimensions $Dimensions
+        Dimensions $Dimensions,
+        $PackageTypeCode = null
     ) {
         $this->PackageTypeCode = $PackageTypeCode;
         $this->Weight = $Weight;

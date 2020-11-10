@@ -11,7 +11,7 @@ class Billing
     public function __construct(
         $ShipperAccountNumber,
         $ShippingPaymentType,
-        $BillingAccountNumber
+        $BillingAccountNumber = null
     ) {
         $this->ShipperAccountNumber = $ShipperAccountNumber;
         $this->ShippingPaymentType = $ShippingPaymentType;

@@ -17,11 +17,11 @@ class LandedCost
     public function __construct(
         $GetItemCostBreakdown,
         $ShipmentCurrencyCode,
-        $ShipmentPurpose,
-        $ShipmentTransportationMode,
-        $MerchantSelectedCarrierName,
-        array $Items,
-        ShipmentMonetaryAmount $ShipmentMonetaryAmount
+        ShipmentMonetaryAmount $ShipmentMonetaryAmount,
+        array $Items = [],
+        $ShipmentPurpose = null,
+        $ShipmentTransportationMode = null,
+        $MerchantSelectedCarrierName = null
     ) {
         $this->GetItemCostBreakdown = $GetItemCostBreakdown;
         $this->ShipmentCurrencyCode = $ShipmentCurrencyCode;

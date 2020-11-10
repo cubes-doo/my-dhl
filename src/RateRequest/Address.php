@@ -14,18 +14,20 @@ class Address
     public $StateOrProvinceCode;
     public $PostalCode;
     public $CountryCode;
+    public $Contact;
 
     public function __construct(
-        $StreetLines,
-        $StreetName,
-        $StreetNumber,
-        $StreetLines2,
-        $StreetLines3,
         $City,
-        $CityDistrict,
-        $StateOrProvinceCode,
         $PostalCode,
-        $CountryCode
+        $CountryCode,
+        Contact $Contact,
+        $StreetLines = null,
+        $StreetName = null,
+        $StreetNumber = null,
+        $StreetLines2 = null,
+        $StreetLines3 = null,
+        $CityDistrict = null,
+        $StateOrProvinceCode = null
     ) {
         $this->StreetLines         = $StreetLines;
         $this->StreetName          = $StreetName;
@@ -37,5 +39,6 @@ class Address
         $this->StateOrProvinceCode = $StateOrProvinceCode;
         $this->PostalCode          = $PostalCode;
         $this->CountryCode         = $CountryCode;
+        $this->Contact = $Contact;
     }
 }

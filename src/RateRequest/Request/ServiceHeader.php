@@ -16,12 +16,12 @@ class ServiceHeader
     public function __construct(
         $MessageTime,
         $MessageReference,
-        $WebstorePlatform,
-        $WebstorePlatformVersion,
-        $ShippingSystemPlatform,
-        $ShippingSystemPlatformVersion,
-        $PlugIn,
-        $PlugInVersion
+        $WebstorePlatform = null,
+        $WebstorePlatformVersion = null,
+        $ShippingSystemPlatform = null,
+        $ShippingSystemPlatformVersion = null,
+        $PlugIn = null,
+        $PlugInVersion = null
     ) {
         $this->MessageTime                   = $MessageTime;
         $this->MessageReference              = $MessageReference;

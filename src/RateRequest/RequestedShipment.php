@@ -35,29 +35,29 @@ class RequestedShipment
     public $LandedCost;
 
     public function __construct(
-        $GetRateEstimates,
-        $GetDetailedRateBreakdown,
-        $IncludeAdditionalCurrencies,
         $DropOffType,
-        $NextBusinessDay,
         $ShipTimestamp,
-        $PickupLocationCloseTime,
         $UnitOfMeasurement,
-        $Content,
-        $DeclaredValue,
-        $DeclaredValueCurrecyCode,
         $PaymentInfo,
         $Account,
-        $PayerCountryCode,
-        $RequestValueAddedServices,
-        $ServiceType,
-        $NetworkTypeCode,
-        $CustomerAgreementInd,
-        $ValidateReadyTime,
         Ship $Ship,
         array $Packages,
         Billing $Billing,
-        LandedCost $LandedCost
+        LandedCost $LandedCost,
+        $GetRateEstimates = null,
+        $GetDetailedRateBreakdown = null,
+        $IncludeAdditionalCurrencies = null,
+        $NextBusinessDay = null,
+        $PickupLocationCloseTime = null,
+        $Content = null,
+        $DeclaredValue = null,
+        $DeclaredValueCurrecyCode = null,
+        $PayerCountryCode = null,
+        $RequestValueAddedServices = null,
+        $ServiceType = null,
+        $NetworkTypeCode = null,
+        $CustomerAgreementInd = null,
+        $ValidateReadyTime = null
     ) {
         $this->GetRateEstimates = $GetRateEstimates;
         $this->GetDetailedRateBreakdown = $GetDetailedRateBreakdown;

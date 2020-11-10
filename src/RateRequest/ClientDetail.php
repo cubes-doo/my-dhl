@@ -8,8 +8,8 @@ class ClientDetail
     public $plant;
 
     public function __construct(
-        $sso,
-        $plant
+        $sso = null,
+        $plant = null
     ) {
         $this->sso = $sso;
         $this->plant = $plant;

@@ -29,24 +29,24 @@ class Item
     public $AdditionalQuantityDefinitions;
 
     public function __construct(
-        $ItemNumber,
-        $Description,
-        $Remark,
-        $ManufacturingCountryCode,
-        $SKUPartNumber,
-        $Quantity,
-        $QuantityType,
-        $UnitPrice,
-        $UnitPriceCurrencyCode,
-        $CustomsValue,
-        $CustomsValueCurrencyCode,
-        $HarmonizedSystemCode,
-        $ItemWeight,
-        $ItemWeightUnitofMeasurement,
-        $Category,
-        $Brand,
-        array $GoodsCharacteristics,
-        array $AdditionalQuantityDefinitions
+        $ItemNumber = null,
+        $Description = null,
+        $Remark = null,
+        $ManufacturingCountryCode = null,
+        $SKUPartNumber = null,
+        $Quantity = null,
+        $QuantityType = null,
+        $UnitPrice = null,
+        $UnitPriceCurrencyCode = null,
+        $CustomsValue = null,
+        $CustomsValueCurrencyCode = null,
+        $HarmonizedSystemCode = null,
+        $ItemWeight = null,
+        $ItemWeightUnitofMeasurement = null,
+        $Category = null,
+        $Brand = null,
+        array $GoodsCharacteristics = null,
+        array $AdditionalQuantityDefinitions = null
     ) {
         $this->ItemNumber = $ItemNumber;
         $this->Description = $Description;

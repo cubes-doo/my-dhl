@@ -14,8 +14,8 @@ class Contact
         $PersonName,
         $CompanyName,
         $PhoneNumber,
-        $EmailAddress,
-        $MobilePhoneNumber
+        $EmailAddress = null,
+        $MobilePhoneNumber = null
     ) {
         $this->PersonName        = $PersonName;
         $this->CompanyName       = $CompanyName;
