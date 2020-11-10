@@ -2,7 +2,7 @@
 
 namespace Cubes\MyDhl\RateRequest;
 
-class ClientDetail 
+class ClientDetail
 {
     public $sso;
     public $plant;

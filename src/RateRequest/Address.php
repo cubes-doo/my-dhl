@@ -29,16 +29,16 @@ class Address
         $CityDistrict = null,
         $StateOrProvinceCode = null
     ) {
-        $this->StreetLines         = $StreetLines;
-        $this->StreetName          = $StreetName;
-        $this->StreetNumber        = $StreetNumber;
-        $this->StreetLines2        = $StreetLines2;
-        $this->StreetLines3        = $StreetLines3;
-        $this->City                = $City;
-        $this->CityDistrict        = $CityDistrict;
+        $this->StreetLines = $StreetLines;
+        $this->StreetName = $StreetName;
+        $this->StreetNumber = $StreetNumber;
+        $this->StreetLines2 = $StreetLines2;
+        $this->StreetLines3 = $StreetLines3;
+        $this->City = $City;
+        $this->CityDistrict = $CityDistrict;
         $this->StateOrProvinceCode = $StateOrProvinceCode;
-        $this->PostalCode          = $PostalCode;
-        $this->CountryCode         = $CountryCode;
+        $this->PostalCode = $PostalCode;
+        $this->CountryCode = $CountryCode;
         $this->Contact = $Contact;
     }
 }

@@ -8,19 +8,15 @@ class MyDhlServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
-     *
-     * @return void
      */
     public function boot()
-    { 
+    {
         $this->publishes([
             __DIR__.'/config/my_dhl.php' => config_path('my_dhl.php'),
         ]);
     }
     /**
      * Register the application services.
-     *
-     * @return void
      */
     public function register()
     {

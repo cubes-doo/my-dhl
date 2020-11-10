@@ -23,13 +23,13 @@ class ServiceHeader
         $PlugIn = null,
         $PlugInVersion = null
     ) {
-        $this->MessageTime                   = $MessageTime;
-        $this->MessageReference              = $MessageReference;
-        $this->WebstorePlatform              = $WebstorePlatform;
-        $this->WebstorePlatformVersion       = $WebstorePlatformVersion;
-        $this->ShippingSystemPlatform        = $ShippingSystemPlatform;
+        $this->MessageTime = $MessageTime;
+        $this->MessageReference = $MessageReference;
+        $this->WebstorePlatform = $WebstorePlatform;
+        $this->WebstorePlatformVersion = $WebstorePlatformVersion;
+        $this->ShippingSystemPlatform = $ShippingSystemPlatform;
         $this->ShippingSystemPlatformVersion = $ShippingSystemPlatformVersion;
-        $this->PlugIn                        = $PlugIn;
-        $this->PlugInVersion                 = $PlugInVersion;
+        $this->PlugIn = $PlugIn;
+        $this->PlugInVersion = $PlugInVersion;
     }
 }

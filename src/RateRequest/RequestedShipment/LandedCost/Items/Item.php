@@ -3,7 +3,7 @@
 namespace Cubes\MyDhl\RateRequest\RequestedShipment\LandedCost\Items;
 
 use Cubes\MyDhl\RateRequest\RequestedShipment\LandedCost\Items\Item\{
-    AdditionalQuantityDefinition, 
+    AdditionalQuantityDefinition,
     GoodsCharacteristic
 };
 

@@ -13,49 +13,48 @@ class MyDhl
     protected $debug;
 
     public function __construct(
-        $basePath, 
-        $username, 
-        $password, 
+        $basePath,
+        $username,
+        $password,
         $debug = true
     ) {
-        $this->basePath = $basePath; 
-        $this->username = $username; 
-        $this->password = $password; 
+        $this->basePath = $basePath;
+        $this->username = $username;
+        $this->password = $password;
         $this->debug = $debug;
     }
 
     protected function make($url)
     {
-        $wsseHeader = 
+        $wsseHeader =
             new WsseAuthHeader(
-                $this->username, 
+                $this->username,
                 $this->password
-            )
-        ;
+            );
 
         $options = null;
-        if($this->debug) {
+        if ($this->debug) {
             $options = [
-                'trace'     => 1,
+                'trace' => 1,
                 'exception' => 1,
             ];
         }
 
         $client = (new \SoapClient($this->basePath . $url . '?WSDL', $options));
         $client->__setSoapHeaders([
-            $wsseHeader
-        ]); 
+            $wsseHeader,
+        ]);
 
         return $client;
     }
 
     protected function log(\SoapClient $client, \SoapFault $fault = null)
     {
-        if(!$this->debug || !function_exists('logger')) {
+        if (! $this->debug || ! function_exists('logger')) {
             return;
         }
         
-        if(!empty($fault)) {
+        if (! empty($fault)) {
             logger('!!! SoapFault:');
             logger($fault->getMessage());
         }
@@ -72,14 +71,14 @@ class MyDhl
 
     protected function logXml($xml = null)
     {
-        if(empty($xml)) {
+        if (empty($xml)) {
             return;
         }
         
         $dom = new \DOMDocument();
-        $dom->preserveWhiteSpace = FALSE;
+        $dom->preserveWhiteSpace = false;
         $dom->loadXML($xml);
-        $dom->formatOutput = TRUE;
+        $dom->formatOutput = true;
         logger("\n" . $dom->saveXML());
     }
 

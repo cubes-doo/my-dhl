@@ -17,10 +17,10 @@ class Contact
         $EmailAddress = null,
         $MobilePhoneNumber = null
     ) {
-        $this->PersonName        = $PersonName;
-        $this->CompanyName       = $CompanyName;
-        $this->PhoneNumber       = $PhoneNumber;
-        $this->EmailAddress      = $EmailAddress;
+        $this->PersonName = $PersonName;
+        $this->CompanyName = $CompanyName;
+        $this->PhoneNumber = $PhoneNumber;
+        $this->EmailAddress = $EmailAddress;
         $this->MobilePhoneNumber = $MobilePhoneNumber;
     }
 }

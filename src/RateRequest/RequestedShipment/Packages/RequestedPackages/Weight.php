@@ -6,7 +6,7 @@ class Weight
 {
     public $Value;
 
-    public function __construct($Value) 
+    public function __construct($Value)
     {
         $this->Value = $Value;
     }
