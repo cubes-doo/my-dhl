@@ -6,4 +6,12 @@ class AdditionalQuantityDefinition
 {
     public $AdditionalQuantity;
     public $AdditionalQuantityType;
+
+    public function __construct(
+        $AdditionalQuantity,
+        $AdditionalQuantityType
+    ) {
+        $this->AdditionalQuantity = $AdditionalQuantity;
+        $this->AdditionalQuantityType = $AdditionalQuantityType;
+    }
 }

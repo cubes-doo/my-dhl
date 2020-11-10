@@ -6,4 +6,12 @@ class GoodsCharacteristic
 {
     public $CharacteristicCode;
     public $CharacteristicValue;
+
+    public function __construct(
+        $CharacteristicCode,
+        $CharacteristicValue
+    ) {
+        $this->CharacteristicCode = $CharacteristicCode;
+        $this->CharacteristicValue = $CharacteristicValue;
+    }
 }
