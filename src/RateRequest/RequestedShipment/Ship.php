@@ -6,7 +6,14 @@ use Cubes\MyDhl\RateRequest\RequestedShipment\Ship\{Recipient, Shipper};
 
 class Ship
 {
+    /**
+     * @var Shipper
+     */
     public $Shipper;
+    
+    /**
+     * @var Recipient
+     */
     public $Recipient;
 
     public function __construct(

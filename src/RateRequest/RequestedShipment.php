@@ -10,28 +10,249 @@ use Cubes\MyDhl\RateRequest\RequestedShipment\{
 
 class RequestedShipment
 {
+    /**
+     * This element is to provide customers with options
+     * to see DHL products and services without price.
+     * This improves response times for the requests.
+     *
+     * If this optional tag is used
+     * then the default value of Y is used to show rates
+     * in the billing account currency.
+     *
+     * Possible values:
+     * 'Y', 'N'
+     *
+     * @var string
+     */
     public $GetRateEstimates;
+
+    /**
+     * This option is to receive a breakdown of charges
+     * including taxes and discounts.
+     *
+     * Possible values:
+     * 'Y', 'N'
+     *
+     * @var string
+     */
     public $GetDetailedRateBreakdown;
+
+    /**
+     * To show charges in other currencies.
+     * When the value is 'Y',
+     * value of currencies will be returned based on:
+     *  + 'BILLC', billing currency
+     *  + 'PULCL', country public rates* currency
+     *  + 'BASEC', base currency
+     *
+     * Possible values:
+     * 'Y', 'N'
+     *
+     * @var string
+     */
     public $IncludeAdditionalCurrencies;
+
+    /**
+     * Possible values:
+     *
+     *  + 'REGULAR_PICKUP',
+     *      the pickup location is already served by a regular courier
+     *       and an additional pickup does not need to be considered for this service
+     *  + 'REQUEST_COURIER',
+     *      the rating response returns products
+     *      for which the pickup capability is given, based on ShipmentTimeStamp.
+     *
+     * @var string
+     */
     public $DropOffType;
+
+    /**
+     * If set to Y then the query will check the Next business day
+     * for products and services if your requested shipping date
+     * does not provide any products and services.
+     *
+     * Possible values:
+     * 'Y', 'N'
+     *
+     * @var string
+     */
     public $NextBusinessDay;
+
+    /**
+     * This timestamp identifies the ready date and time of the rated shipment.
+     * If the date is on a public holiday, sunday or any other day where
+     * there is no pickup Capability for DHL Express
+     * then no products and services will be returned.
+     *
+     * Format:
+     * YYYY-MM-DDTHH:MM:SSGMT+k
+     *
+     * Example:
+     * 2010-02-26T17:00:00GMT+01:00
+     *
+     * @var string
+     */
     public $ShipTimestamp;
+
+    /**
+     * For future use
+     *
+     * @var string
+     */
     public $PickupLocationCloseTime;
+
+    /**
+     * The unit of measurement for the dimensions of the package.
+     *
+     * Possible values:
+     *  + 'SI', international metric system (KG, CM)
+     *  + 'SU', United States system of measurement (LB, IN)
+     *
+     * @var string
+     */
     public $UnitOfMeasurement;
+
+    /**
+     * Possible values :
+     *  + 'DOCUMENTS'
+     *  + 'NON_DOCUMENTS'
+     *
+     * @var string
+     */
     public $Content;
+
+    /**
+     * Declared value of the shipment
+     *
+     * @var string
+     */
     public $DeclaredValue;
+
+    /**
+     * 3 character currency code for the declared value (ISO 4217)
+     *
+     * @var string
+     */
     public $DeclaredValueCurrecyCode;
+
+    /**
+     * The Incoterms applicable to your shipment.
+     *
+     * Possible values:
+     *  + 'CFR', Cost And Freight
+     *  + 'CIF', Cost, Insurance and Freight
+     *  + 'CIP', Carriage And Insurance Paid
+     *  + 'CPT', Carriage Paid To
+     *  + 'DAF', Delivered At Frontier
+     *  + 'DDP', Delivery Duty Paid
+     *  + 'DDU', Delivery Duty Unpaid
+     *  + 'DAP', Delivered At Place
+     *  + 'DEQ', Delivered Ex Quay (Duty Paid)
+     *  + 'DES', Delivered Ex Ship
+     *  + 'EXW', Ex Works
+     *  + 'FAS', Free Alongside Ship
+     *  + 'FCA', Free Carrier
+     *  + 'FOB', Free On Board
+     *
+     * @var string
+     */
     public $PaymentInfo;
+
+    /**
+     * The DHL account number that is used for the shipment.
+     * Internally attached to this account are the customer specific rates.
+     *
+     * !!! Please note if you use the Account tag then the Billing section below is not needed.
+     *
+     * @var string
+     */
     public $Account;
+
+    /**
+     * The country code of the payer (ISO 3166)
+     * This field is to allow rate requests with no account number provided.
+     * It is mandatory to provide this input field if DHL customers
+     * want to request for standard country rates but no account number is provided.
+     *
+     * @var string
+     */
     public $PayerCountryCode;
+
+    /**
+     * If the value is 'Y' all the additional services available
+     * for the product selected will be returned
+     *
+     * Possible values:
+     * 'Y', 'N'
+     *
+     * @var string
+     */
     public $RequestValueAddedServices;
+
+    /**
+     * DHL Product Code used to ship the items
+     * If Freight charges are not provided in the Landed Cost request
+     * then the ServiceType (DHL Express Product Code) has to be provided.
+     *
+     * @var string
+     */
     public $ServiceType;
+
+    /**
+     * The NetworkTypeCode field is used to filter facility network type code.
+     * The default value is AL, return all
+     * products. DD is for Economy Select
+     * products and TD for Time Definite
+     * products.
+     *
+     * Possible values:
+     *  + 'AL', return all products
+     *  + 'DD', for Economy Select products
+     *  + 'TD', for Time Definite products
+     *
+     * @var string
+     */
     public $NetworkTypeCode;
+
+    /**
+     * Customer agreement indicator for product and services.
+     * This field is for filtering agreement and non-agreement products.
+     *
+     * Possible values:
+     * 'Y', 'N'
+     *
+     * @var string
+     */
     public $CustomerAgreementInd;
+
+    /**
+     * Validate ready time against pickup window start on Economy Select products.
+     *
+     * Possible values:
+     * 'Y', 'N'
+     *
+     * @var string
+     */
     public $ValidateReadyTime;
+
+    /**
+     * @var Ship
+     */
     public $Ship;
+
+    /**
+     * @var array
+     */
     public $Packages;
+
+    /**
+     * @var Billing
+     */
     public $Billing;
+
+    /**
+     * @var LandedCost
+     */
     public $LandedCost;
 
     public function __construct(

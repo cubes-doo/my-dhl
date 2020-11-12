@@ -4,8 +4,34 @@ namespace Cubes\MyDhl\RateRequest\RequestedShipment;
 
 class Billing
 {
+    /**
+     * The DHL account number used for the shipment
+     *
+     * Please note if you use this billing
+     * section then the Account attribute on RequestedShipment is not needed.
+     *
+     * @var string
+     */
     public $ShipperAccountNumber;
+
+    /**
+     * Possible values:
+     *  + 'S' (use ShipperAccountNumber as payer)
+     *  + 'R' (use BillingAccountNumber as bill-to receiver account number)
+     *  + 'T' (use BillingAccountNumber as bill-to third party account number)
+     *
+     * Please note if you use value R or T then BillingAccountNumber is also mandatory.
+     *
+     * @var string
+     */
     public $ShippingPaymentType;
+
+    /**
+     * The DHL account number used for the shipment,
+     * if ShippingPaymentType is equal to 'R' or 'T'
+     *
+     * @var string
+     */
     public $BillingAccountNumber;
 
     public function __construct(

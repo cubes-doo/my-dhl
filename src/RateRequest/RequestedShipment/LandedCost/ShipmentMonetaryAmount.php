@@ -6,6 +6,9 @@ use Cubes\MyDhl\RateRequest\RequestedShipment\LandedCost\ShipmentMonetaryAmount\
 
 class ShipmentMonetaryAmount
 {
+    /**
+     * @var Charges
+     */
     public $Charges;
 
     public function __construct(

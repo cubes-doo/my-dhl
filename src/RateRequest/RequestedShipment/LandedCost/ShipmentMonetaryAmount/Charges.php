@@ -4,8 +4,32 @@ namespace Cubes\MyDhl\RateRequest\RequestedShipment\LandedCost\ShipmentMonetaryA
 
 class Charges
 {
+    /**
+     * The additional charges from merchant
+     * that they would like to aggregate and sum up
+     * as part of Total Landed Cost.
+     *
+     * Possible values:
+     *  + 'FREIGHT'
+     *  + 'ADDITIONAL_CHARGE'
+     *  + 'INSURANCE'
+     *
+     * @var string
+     */
     public $ChargeType;
+
+    /**
+     * The total charge amount of the specific charge
+     *
+     * @var string
+     */
     public $ChargeAmount;
+
+    /**
+     * The currency code (ISO 3166)
+     *
+     * @var string
+     */
     public $CurrencyCode;
 
     public function __construct(

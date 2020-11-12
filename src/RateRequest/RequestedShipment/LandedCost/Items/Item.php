@@ -9,23 +9,135 @@ use Cubes\MyDhl\RateRequest\RequestedShipment\LandedCost\Items\Item\{
 
 class Item
 {
+    /**
+     * Line item number
+     *
+     * @var string
+     */
     public $ItemNumber;
+
+    /**
+     * Description of the item
+     *
+     * @var string
+     */
     public $Description;
+
+    /**
+     * Item full description
+     *
+     * @var string
+     */
     public $Remark;
+
+    /**
+     * Country code of the goods manufacturer (ISO 3166)
+     *
+     * @var string
+     */
     public $ManufacturingCountryCode;
+
+    /**
+     * Stock Keeping Unit number
+     *
+     * @var string
+     */
     public $SKUPartNumber;
+
+    /**
+     * Total quantity of the item(s) to be shipped
+     *
+     * @var string
+     */
     public $Quantity;
+
+    /**
+     * Possible values:
+     *  + 'PRT' - Part/ Article
+     *  + 'BOX' - Box
+     *
+     * @var string
+     */
     public $QuantityType;
+
+    /**
+     * Product Unit price
+     *
+     * @var string
+     */
     public $UnitPrice;
+
+    /**
+     * Currency code of the Unit Price (ISO 4217)
+     *
+     * @var string
+     */
     public $UnitPriceCurrencyCode;
+
+    /**
+     * Not used
+     *
+     * @var string
+     */
     public $CustomsValue;
+
+    /**
+     * Not used
+     *
+     * @var string
+     */
     public $CustomsValueCurrencyCode;
+
+    /**
+     * HS Code identifies the item for the Import country
+     * to identify the import duty rate for the item
+     *
+     * Can be provided with or without
+     * dots.
+     *
+     * @var string
+     */
     public $HarmonizedSystemCode;
+
+    /**
+     * Weight of the item
+     *
+     * @var string
+     */
     public $ItemWeight;
+
+    /**
+     * Unit of measurement
+     *
+     * Possible values:
+     * 'SI', 'SU'
+     *
+     * @var string
+     */
     public $ItemWeightUnitofMeasurement;
+
+    /**
+     * Category of the Item
+     *
+     * @var string
+     */
     public $Category;
+
+    /**
+     * Item’s brand
+     *
+     * @var string
+     */
     public $Brand;
+
+    /**
+     * @var array
+     */
     public $GoodsCharacteristics;
+
+    /**
+     * @var array
+     */
     public $AdditionalQuantityDefinitions;
 
     public function __construct(
