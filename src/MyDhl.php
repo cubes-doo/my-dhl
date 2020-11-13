@@ -40,7 +40,7 @@ class MyDhl
             ];
         }
 
-        $client = (new \SoapClient($this->basePath . $url . '?WSDL', $options));
+        $client = (new Client($this->basePath . $url . '?WSDL', $options));
         $client->__setSoapHeaders([
             $wsseHeader,
         ]);
@@ -48,7 +48,7 @@ class MyDhl
         return $client;
     }
 
-    protected function log(\SoapClient $client, \SoapFault $fault = null)
+    protected function log(Client $client, \SoapFault $fault = null)
     {
         if (! $this->debug || ! function_exists('logger')) {
             return;
