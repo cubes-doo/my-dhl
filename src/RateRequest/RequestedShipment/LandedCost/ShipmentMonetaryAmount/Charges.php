@@ -4,6 +4,10 @@ namespace Cubes\MyDhl\RateRequest\RequestedShipment\LandedCost\ShipmentMonetaryA
 
 class Charges
 {
+    const CHARGE_TYPE_FREIGHT = 'FREIGHT';
+    const CHARGE_TYPE_ADDITIONAL_CHARGE = 'ADDITIONAL_CHARGE';
+    const CHARGE_TYPE_INSURANCE = 'INSURANCE';
+
     /**
      * The additional charges from merchant
      * that they would like to aggregate and sum up

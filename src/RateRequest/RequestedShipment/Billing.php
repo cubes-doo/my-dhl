@@ -5,6 +5,19 @@ namespace Cubes\MyDhl\RateRequest\RequestedShipment;
 class Billing
 {
     /**
+     * Use ShipperAccountNumber as payer
+     */
+    const SHIPPING_PAYMENT_TYPE_S = 'S';
+    /**
+     * Use BillingAccountNumber as bill-to receiver account number
+     */
+    const SHIPPING_PAYMENT_TYPE_R = 'R';
+    /**
+     * Use BillingAccountNumber as bill-to third party account number
+     */
+    const SHIPPING_PAYMENT_TYPE_T = 'T';
+
+    /**
      * The DHL account number used for the shipment
      *
      * Please note if you use this billing

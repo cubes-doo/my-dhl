@@ -7,6 +7,26 @@ use Cubes\MyDhl\RateRequest\RequestedShipment\LandedCost\ShipmentMonetaryAmount;
 class LandedCost
 {
     /**
+     * B2B
+     */
+    const SHIPMENT_PURPOSE_COMMERCIAL = 'COMMERCIAL';
+    /**
+     * B2C
+     */
+    const SHIPMENT_PURPOSE_PERSONAL = 'PERSONAL';
+
+    const SHIPMENT_TRANSPORTATION_MODE_AIR = 'AIR';
+    const SHIPMENT_TRANSPORTATION_MODE_OCEAN = 'OCEAN';
+    const SHIPMENT_TRANSPORTATION_MODE_GROUND = 'GROUND';
+
+    const MERCHANT_SELECTED_CARRIER_NAME_DHL = 'DHL';
+    const MERCHANT_SELECTED_CARRIER_NAME_UPS = 'UPS';
+    const MERCHANT_SELECTED_CARRIER_NAME_FEDEX = 'FEDEX';
+    const MERCHANT_SELECTED_CARRIER_NAME_TNT = 'TNT';
+    const MERCHANT_SELECTED_CARRIER_NAME_POST = 'POST';
+    const MERCHANT_SELECTED_CARRIER_NAME_OTHERS = 'OTHERS';
+
+    /**
      * Possible values:
      * 'Y', 'N'
      *

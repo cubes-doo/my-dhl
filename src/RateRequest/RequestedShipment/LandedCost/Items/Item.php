@@ -10,6 +10,18 @@ use Cubes\MyDhl\RateRequest\RequestedShipment\LandedCost\Items\Item\{
 class Item
 {
     /**
+     * Part/ Article
+     */
+    const QUANTITY_TYPE_PRT = 'PRT';
+    /**
+     * Box
+     */
+    const QUANTITY_TYPE_BOX = 'BOX';
+
+    const ITEM_WEIGHT_UNIT_OF_MEASUREMENT_SI = 'SI';
+    const ITEM_WEIGHT_UNIT_OF_MEASUREMENT_SU = 'SU';
+
+    /**
      * Line item number
      *
      * @var string

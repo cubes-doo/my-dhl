@@ -10,6 +10,85 @@ use Cubes\MyDhl\RateRequest\RequestedShipment\{
 
 class RequestedShipment
 {
+    const DROP_OFF_TYPE_REGULAR_PICKUP = 'REGULAR_PICKUP';
+    const DROP_OFF_TYPE_REQUEST_COURIER = 'REQUEST_COURIER';
+
+    const UNIT_OF_MEASUREMENT_SI = 'SI';
+    const UNIT_OF_MEASUREMENT_SU = 'SU';
+
+    const CONTENT_DOCUMENTS = 'DOCUMENTS';
+    const CONTENT_NON_DOCUMENTS = 'NON_DOCUMENTS';
+
+    /**
+     * Cost And Freight
+     */
+    const PAYMENT_INFO_CFR = 'CFR';
+    /**
+     * Cost, Insurance and Freight
+     */
+    const PAYMENT_INFO_CIF = 'CIF';
+    /**
+     * Carriage And Insurance Paid
+     */
+    const PAYMENT_INFO_CIP = 'CIP';
+    /**
+     * Carriage Paid To
+     */
+    const PAYMENT_INFO_CPT = 'CPT';
+    /**
+     * Delivered At Frontier
+     */
+    const PAYMENT_INFO_DAF = 'DAF';
+    /**
+     * Delivery Duty Paid
+     */
+    const PAYMENT_INFO_DDP = 'DDP';
+    /**
+     * Delivery Duty Unpaid
+     */
+    const PAYMENT_INFO_DDU = 'DDU';
+    /**
+     * Delivered At Place
+     */
+    const PAYMENT_INFO_DAP = 'DAP';
+    /**
+     * Delivered Ex Quay (Duty Paid)
+     */
+    const PAYMENT_INFO_DEQ = 'DEQ';
+    /**
+     * Delivered Ex Ship
+     */
+    const PAYMENT_INFO_DES = 'DES';
+    /**
+     * Ex Works
+     */
+    const PAYMENT_INFO_EXW = 'EXW';
+    /**
+     * Free Alongside Ship
+     */
+    const PAYMENT_INFO_FAS = 'FAS';
+    /**
+     * Free Carrier
+     */
+    const PAYMENT_INFO_FCA = 'FCA';
+    /**
+     * Free On Board
+     */
+    const PAYMENT_INFO_FOB = 'FOB';
+
+    /**
+     * Return all products
+     */
+    const NETWORK_TYPE_CODE_AL = 'AL';
+    /**
+     * For Economy Select products
+     */
+    const NETWORK_TYPE_CODE_DD = 'DD';
+    /**
+     * For Time Definite products
+     */
+    const NETWORK_TYPE_CODE_TD = 'TD';
+
     /**
      * This element is to provide customers with options
      * to see DHL products and services without price.
