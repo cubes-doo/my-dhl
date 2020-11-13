@@ -5,6 +5,7 @@ namespace Cubes\MyDhl\RateRequest;
 use Cubes\MyDhl\RateRequest\RequestedShipment\{
     Billing,
     LandedCost,
+    Packages,
     Ship
 };
 
@@ -341,7 +342,7 @@ class RequestedShipment
         $PaymentInfo,
         $Account,
         Ship $Ship,
-        array $Packages,
+        Packages $Packages,
         Billing $Billing,
         LandedCost $LandedCost = null,
         $GetRateEstimates = null,
