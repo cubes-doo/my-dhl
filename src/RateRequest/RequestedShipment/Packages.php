@@ -8,7 +8,7 @@ class Packages
 {
     public $RequestedPackages;
 
-    public function __construct(RequestedPackage $RequestedPackages) 
+    public function __construct(RequestedPackage $RequestedPackages)
     {
         $this->RequestedPackages = $RequestedPackages;
     }
