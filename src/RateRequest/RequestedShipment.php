@@ -343,7 +343,7 @@ class RequestedShipment
         Ship $Ship,
         array $Packages,
         Billing $Billing,
-        LandedCost $LandedCost,
+        LandedCost $LandedCost = null,
         $GetRateEstimates = null,
         $GetDetailedRateBreakdown = null,
         $IncludeAdditionalCurrencies = null,
