@@ -29,3 +29,18 @@ composer require cubes-doo/my-dhl
 ## Index of examples for supported features:
 
 1. [RateRequest](src/RateRequest/README.md)
+
+:warning: **Things to keep in mind in general**:
+
+- this is an SDK for a SOAP API; There are a lot of simple classes that only have attributes and constructors - this is so that we could better define what DHL's API expects as arguments; It might be tedious, but this is why examples are provided for every one of the supported API calls
+- if you see a datetime attribute, it should usually be filled w/ a date-time string in the format `YYYY-MM-DDTHH:MM:SSGMT+k`; This format corresponds w/ the ISO 8601 standard; Luckly Carbon's got your back; It is highly reccomended you use Carbon's `toIso8601String()` method, like so: `now()->toIso8601String()` to populate these attributes
+- some attributes will have a docblock like this: 
+    ```php
+        /**
+         * Possible values:
+         * + 'Y' or 1, ...
+         * ...
+         * + 'N' or 0, ...
+         */
+    ```
+    avoid mixing these two options. If you want, use 'y'/'n' on all such attributes, or stick to 1/0 instead. No constants are provided for these, because they are self explanatory, one character values.
