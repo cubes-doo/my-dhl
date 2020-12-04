@@ -321,7 +321,7 @@ class RequestedShipment
     public $Ship;
 
     /**
-     * @var array
+     * @var Packages
      */
     public $Packages;
 
