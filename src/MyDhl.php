@@ -4,6 +4,7 @@
 namespace Cubes\MyDhl;
 
 use Cubes\MyDhl\RateRequest\RateRequest;
+use Cubes\MyDhl\ShipmentRequest\ShipmentRequest;
 
 class MyDhl
 {
@@ -88,6 +89,21 @@ class MyDhl
 
         try {
             $res = $client->getRateRequest($request);
+            $this->log($client);
+        } catch (\SoapFault $s) {
+            $this->log($client, $s);
+            throw new \Exception('SoapFault: ' . $s->getMessage());
+        }
+        
+        return $res;
+    }
+
+    public function shipmentRequest(ShipmentRequest $request)
+    {
+        $client = $this->make('expressRateBook');
+
+        try {
+            $res = $client->createShipment($request);
             $this->log($client);
         } catch (\SoapFault $s) {
             $this->log($client, $s);
