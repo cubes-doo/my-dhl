@@ -103,7 +103,7 @@ class MyDhl
         $client = $this->make('expressRateBook');
 
         try {
-            $res = $client->createShipment($request);
+            $res = $client->createShipmentRequest($request);
             $this->log($client);
         } catch (\SoapFault $s) {
             $this->log($client, $s);
