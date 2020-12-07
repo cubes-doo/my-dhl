@@ -63,7 +63,7 @@ class Billing
 
     public function __construct(
         $ShippingPaymentType,
-        ShipmentPrepaidTotalCharge $ShipmentPrepaidTotalCharge,
+        ShipmentPrepaidTotalCharge $ShipmentPrepaidTotalCharge = null,
         $ShipperAccountNumber = null,
         $BillingAccountNumber = null,
         $DutyAndTaxPayerAccountNumber = null,
