@@ -3,8 +3,8 @@
 namespace Cubes\MyDhl\ShipmentRequest\RequestedShipment\Packages;
 
 use Cubes\MyDhl\ShipmentRequest\RequestedShipment\Packages\RequestedPackages\{
-    Dimensions,
-    BespokeLabelData
+    BespokeLabelData,
+    Dimensions
 };
 
 class RequestedPackages
@@ -30,14 +30,14 @@ class RequestedPackages
 
     /**
      * Insurance values of the package.
-     * 
+     *
      * @var string
      */
     public $InsuredValue;
 
     /**
      * The weight of the package.
-     * 
+     *
      * @var string
      */
     public $Weight;
@@ -49,11 +49,11 @@ class RequestedPackages
      * centrally.
      * In addition this special function needs to be enabled for your username by
      * your DHL Express IT Consultant.
-     * 
+     *
      * Possible values:
      * + 'Y', allows you to define your own PieceID in the tag below
      * + 'N', Auto-allocates the PieceID from DHL Express (Default)
-     * 
+     *
      * @var string
      */
     public $UseOwnPieceIdentificationNumber;
@@ -65,7 +65,7 @@ class RequestedPackages
      * centrally.
      * If you wish to use this function then the UseOwnPieceIdentificationNumber attribute
      * needs to be set as 'Y'.
-     * 
+     *
      * @var string
      */
     public $PieceIdentificationNumber;
@@ -73,7 +73,7 @@ class RequestedPackages
     /**
      * This optional field allows you to provide the content description on a piece level
      * instead of Shipment level.
-     * 
+     *
      * @var string
      */
     public $PackageContentDescription;
@@ -82,28 +82,28 @@ class RequestedPackages
      * Parent (Mother) Piece ID number.
      * This field will be used to indicate the Mother Shipment's Piece ID for linkage
      * purposes.
-     * 
+     *
      * @var string
      */
     public $ParentPieceIdentificationNumber;
 
     /**
      * Customer Reference for the piece.
-     * 
+     *
      * @var string
      */
     public $CustomerReferences;
 
     /**
      * Shipment reference type
-     * 
+     *
      * @var string
      */
     public $CustomerReferenceType;
 
     /**
      * Package type code
-     * 
+     *
      * Possible values:
      * + '3BX'
      * + '2BC'
@@ -123,7 +123,7 @@ class RequestedPackages
      * + 'TBL'
      * + 'TBS'
      * + 'WB2'
-     * 
+     *
      * @var string
      */
     public $PackageTypeCode;

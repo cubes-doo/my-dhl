@@ -6,23 +6,23 @@ class LabelTextEntry
 {
     /**
      * Barcode sequence number
-     * 
+     *
      * @var string
      */
     public $LabelNumber;
 
     /**
      * The caption to be printed in the tag value
-     * 
+     *
      * @var string
      */
     public $LabelCaption;
     
     /**
      * The value to be printed for the respective tag in caption
-     * 
+     *
      * eg. "SALES", "50", "CN", "SG Regional"
-     * 
+     *
      * @var string
      */
     public $LabelDescription;

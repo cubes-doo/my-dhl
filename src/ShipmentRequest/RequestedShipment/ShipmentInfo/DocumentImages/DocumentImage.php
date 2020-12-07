@@ -20,7 +20,7 @@ class DocumentImage
 
     /**
      * The type of document for the image provided
-     * 
+     *
      * Possible values;
      * + 'INV', Invoice
      * + 'PNV', Proforma
@@ -29,16 +29,16 @@ class DocumentImage
      * + 'CIN', Commercial Invoice
      * + 'DCL', Custom Declaration
      * + 'AWB', Air Waybill and Waybill Document
-     * 
+     *
      * @var string
      */
     public $DocumentImageType;
     
     /**
      * The image of the document
-     * 
+     *
      * Base64 Binary
-     * 
+     *
      * @var string
      */
     public $DocumentImage;
@@ -50,7 +50,7 @@ class DocumentImage
      * + 'TIFF'
      * + 'GIF'
      * + 'JPEG'
-     * 
+     *
      * @var string
      */
     public $DocumentImageFormat;

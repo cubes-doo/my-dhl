@@ -40,16 +40,16 @@ class ExportLineItem
 
     /**
      * Commodity code for the shipment at item line level
-     * 
+     *
      * @var string
      */
     public $CommodityCode;
 
     /**
      * ECCN (Export Control ClassificationNumber) info
-     * 
+     *
      * This is required for EEI filing US country usage.
-     * 
+     *
      * @var string
      */
     public $ECCN;
@@ -59,28 +59,28 @@ class ExportLineItem
      * + 'PERMANENT'
      * + 'TEMPORARY'
      * + 'RETURN'
-     * 
+     *
      * @var string
      */
     public $ExportReasonType;
 
     /**
      * Serial number for the items
-     * 
+     *
      * @var string
      */
     public $ItemNumber;
 
     /**
      * Number of pieces of a particular line item
-     * 
+     *
      * @var string
      */
     public $Quantity;
 
     /**
      * The quantity unit of measurement
-     * 
+     *
      * Possible values:
      * + 'BOX Boxes'
      * + '2GM Centigram'
@@ -111,53 +111,53 @@ class ExportLineItem
      * + 'M2 Square Meters'
      * + '4M2 Square Yards'
      * + '3M Yards'
-     * 
+     *
      * @var string
      */
     public $QuantityUnitOfMeasuremen;
 
     /**
      * The description of the line item
-     * 
+     *
      * @var string
      */
     public $ItemDescription;
 
     /**
      * Monetary value of each line item
-     * 
+     *
      * @var string
      */
     public $UnitPrice;
 
     /**
      * Net weight of the line item
-     * 
+     *
      * @var string
      */
     public $NetWeight;
 
     /**
      * Gross weight of the line item
-     * 
+     *
      * @var string
      */
     public $GrossWeight;
 
     /**
      * Manufacturing ISO country code
-     * 
+     *
      * @var string
      */
     public $ManufacturingCountryCode;
 
     /**
      * TaxesPaid if set to N. The default is N
-     * 
+     *
      * Possible values:
      * + 'Y'
      * + 'N'
-     * 
+     *
      * @var string
      */
     public $TaxesPaid;

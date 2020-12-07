@@ -6,11 +6,11 @@ class CustomerLogo
 {
     /**
      * The customer logo image in base64 encoding
-     * 
+     *
      * Supported image file format:
      * + RGB
      * + B&W, Black and White
-     * 
+     *
      * @var string
      */
     public $LogoImage;
@@ -21,7 +21,7 @@ class CustomerLogo
      * + JPEG
      * + JPG
      * + PNG
-     * 
+     *
      * @var string
      */
     public $LogoImageFormat;

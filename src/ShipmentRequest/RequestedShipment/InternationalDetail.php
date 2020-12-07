@@ -16,7 +16,7 @@ class InternationalDetail
      * Possible values:
      * + 'DOCUMENTS'
      * + 'NON_DOCUMENTS'
-     * 
+     *
      * @var string
      */
     public $Content;

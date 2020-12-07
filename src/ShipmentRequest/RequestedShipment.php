@@ -3,12 +3,12 @@
 namespace Cubes\MyDhl\ShipmentRequest;
 
 use Cubes\MyDhl\ShipmentRequest\RequestedShipment\{
-    ShipmentInfo,
+    DangerousGoods,
     InternationalDetail,
     OnDemandDeliveryOptions,
-    Ship,
     Packages,
-    DangerousGoods,
+    Ship,
+    ShipmentInfo,
     ShipmentNotifications
 };
 
@@ -86,7 +86,7 @@ class RequestedShipment
 
     /**
      * This node identifies the closing time of your pickup location in local time.
-     * 
+     *
      * Format:
      * HH:mm
      *
@@ -96,14 +96,14 @@ class RequestedShipment
 
     /**
      * This node details special pickup instructions you may wish to send to the DHL Courier
-     * 
+     *
      * @var string
      */
     public $SpecialPickupInstruction;
 
     /**
      * This node provides information on where the package should be picked up by DHL courier.
-     * 
+     *
      * @var string
      */
     public $PickupLocation;
@@ -133,22 +133,22 @@ class RequestedShipment
 
     /**
      * Request for ODD link URL for the specified Waybill Number, Shipper Account Number
-     * 
+     *
      * Possible values:
      * 'Y', 'N'
-     * 
+     *
      * @var string
      */
     public $OnDemandDeliveryURLRequest;
 
     /**
-     * This field is used to return the TotalNet in the response message. 
-     * The default value for this field is N. 
+     * This field is used to return the TotalNet in the response message.
+     * The default value for this field is N.
      * Please note that this may increase response times.
-     * 
+     *
      * Possible values:
      * 'Y', 'N'
-     * 
+     *
      * @var string
      */
     public $GetRateEstimates;

@@ -3,10 +3,10 @@
 namespace Cubes\MyDhl\ShipmentRequest\RequestedShipment\Ship;
 
 use Cubes\MyDhl\ShipmentRequest\RequestedShipment\Ship\Participant\{
-    Contact,
     Address,
-    RegistrationNumbers,
-    BankDetails
+    BankDetails,
+    Contact,
+    RegistrationNumbers
 };
 
 class Participant

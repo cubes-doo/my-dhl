@@ -14,47 +14,47 @@ class ShipmentNotification
 
     /**
      * The notification method to be sent.
-     * Possible values: 
+     * Possible values:
      * + 'EMAIL'
-     * 
+     *
      * @var string
      */
     public $NotificationMethod;
 
     /**
      * Email address of the party to receive email notification.
-     * 
+     *
      * @var string
      */
     public $EmailAddress;
 
     /**
      * Additional message to be added to the body of the mail
-     * 
+     *
      * @var string
      */
     public $BespokeMessage;
 
     /**
      * LanguageCode used in the email content
-     * 
+     *
      * Possible values:
      * + 'eng', British English (Default)
      * + 'zho', Chinese Traditional
      * + 'chi', Chinese Simplified
-     * 
+     *
      * @var string
      */
     public $LanguageCode;
 
     /**
      * Language country code
-     * 
+     *
      * Possible values:
      * + 'CH'
      * + 'GB'
      * + 'US'
-     * 
+     *
      * @var string
      */
     public $LanguageCountryCode;

@@ -6,21 +6,21 @@ class BankDetail
 {
     /**
      * To be mapped in Customs Invoice - Russia Bank Name field
-     * 
+     *
      * @var string
      */
     public $BankName;
 
     /**
      * To be mapped in Customs Invoice - Russia Bank Settlement Account Number in RUR field
-     * 
+     *
      * @var string
      */
     public $BankSettlementAccountNumberInLocalCurrency;
 
     /**
      * To be mapped in Customs Invoice - Russia Bank Settlement Account Number in USD/EUR
-     * 
+     *
      * @var string
      */
     public $BankSettlementAccountNumberInForeignCurrency;

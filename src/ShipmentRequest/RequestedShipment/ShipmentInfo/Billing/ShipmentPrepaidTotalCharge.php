@@ -8,24 +8,24 @@ class ShipmentPrepaidTotalCharge
 
     /**
      * Payment currency code
-     * 
+     *
      * @var string
      */
     public $CurrencyCode;
 
     /**
      * Amount of payment
-     * 
+     *
      * @var string
      */
     public $Amount;
 
     /**
      * Payment method
-     * 
+     *
      * Possible values:
      * + 'CASH'
-     * 
+     *
      * @var string
      */
     public $PaymentMethod;

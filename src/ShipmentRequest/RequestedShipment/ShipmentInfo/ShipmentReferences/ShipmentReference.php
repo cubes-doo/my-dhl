@@ -20,7 +20,7 @@ class ShipmentReference
 
     /**
      * Shipment reference number
-     * 
+     *
      * @var string
      */
     public $ShipmentReference;
@@ -41,7 +41,7 @@ class ShipmentReference
      * + 'CDN', customs declaration number
      * + 'STD', eurolog 15-digit shipment id
      * + 'CO', buyers order number
-     * 
+     *
      * @var string
      */
     public $ShipmentReferenceType;

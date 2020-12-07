@@ -5,4 +5,5 @@ namespace Cubes\MyDhl\ShipmentRequest\RequestedShipment\Packages\RequestedPackag
 use Cubes\MyDhl\RateRequest\RequestedShipment\Packages\RequestedPackages\Dimensions as BaseDimensions;
 
 class Dimensions extends BaseDimensions
-{}
+{
+}

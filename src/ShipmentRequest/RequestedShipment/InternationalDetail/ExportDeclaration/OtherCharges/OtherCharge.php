@@ -6,14 +6,14 @@ class OtherCharge
 {
     /**
      * Caption can be passed to print in this attribute
-     * 
+     *
      * @var string
      */
     public $Caption;
 
     /**
      * Charge value can be passed to print in this attribute
-     * 
+     *
      * @var string
      */
     public $ChargeValue;

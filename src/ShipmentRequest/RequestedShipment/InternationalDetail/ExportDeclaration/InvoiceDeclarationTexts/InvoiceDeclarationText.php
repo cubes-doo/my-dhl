@@ -6,7 +6,7 @@ class InvoiceDeclarationText
 {
     /**
      * Additional Declaration text maximum of 3
-     * 
+     *
      * @var string
      */
     public $DeclarationText;

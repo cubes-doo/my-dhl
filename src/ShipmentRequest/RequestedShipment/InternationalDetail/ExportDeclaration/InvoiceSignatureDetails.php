@@ -6,14 +6,14 @@ class InvoiceSignatureDetails
 {
     /**
      * Name of signatory
-     * 
+     *
      * @var string
      */
     public $SignatureName;
 
     /**
      * Title of signatory
-     * 
+     *
      * @var string
      */
     public $SignatureTitle;
@@ -22,7 +22,7 @@ class InvoiceSignatureDetails
      * Signature image in base64 format
      * Max of size is 1 MB
      * Valid format of image are: PNG, GIF, JPEG, JPG.
-     * 
+     *
      * @var string
      */
     public $SignatureImage;

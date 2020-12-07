@@ -5,15 +5,15 @@ namespace Cubes\MyDhl\ShipmentRequest\RequestedShipment\ShipmentInfo\LabelOption
 class DetachOptions
 {
     /**
-     * This field provide option to generate a single PDF 
-     * or thermal output image file consists of 
-     * Transport Label, Waybill Document, Shipment Receipt 
-     * and Commercial Invoice. 
-     * The default value is N, where a single PDF or thermal output 
-     * image file consists of Transport Label + Waybill Document 
-     * and single PDF or thermal output image file for 
+     * This field provide option to generate a single PDF
+     * or thermal output image file consists of
+     * Transport Label, Waybill Document, Shipment Receipt
+     * and Commercial Invoice.
+     * The default value is N, where a single PDF or thermal output
+     * image file consists of Transport Label + Waybill Document
+     * and single PDF or thermal output image file for
      * Shipment Receipt and Customs Invoice will be returned.
-     * 
+     *
      * @var string
      */
     public $AllInOnePDF;
@@ -32,7 +32,7 @@ class DetachOptions
      * and single PDF or thermal output
      * image file for Shipment Receipt and
      * Customs Invoice will be returned.
-     * 
+     *
      * @var string
      */
     public $SplitShipmentReceiptAndCustomsInvoice;
@@ -52,7 +52,7 @@ class DetachOptions
      * and single PDF or thermal output
      * image file for Shipment Receipt and
      * Customs Invoice will be returned.
-     * 
+     *
      * @var string
      */
     public $SplitTransportLabelAndWaybillDocument;
@@ -71,7 +71,7 @@ class DetachOptions
      * and single PDF or thermal output
      * image file for Shipment Receipt and
      * Customs Invoice will be returned.
-     * 
+     *
      * @var string
      */
     public $SplitLabelsByPieces;

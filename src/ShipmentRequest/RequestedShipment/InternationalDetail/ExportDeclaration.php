@@ -3,53 +3,53 @@
 namespace Cubes\MyDhl\ShipmentRequest\RequestedShipment\InternationalDetail;
 
 use Cubes\MyDhl\ShipmentRequest\RequestedShipment\InternationalDetail\ExportDeclaration\{
-    Remarks,
-    OtherCharges,
-    InvoiceSignatureDetails,
+    ExportLineItems,
     InvoiceDeclarationTexts,
-    ExportLineItems
+    InvoiceSignatureDetails,
+    OtherCharges,
+    Remarks
 };
 
 class ExportDeclaration
 {
     /**
      * Destination port details
-     * 
+     *
      * @var string
      */
     public $DestinationPort;
 
     /**
      * Exporter Code
-     * 
+     *
      * @var string
      */
     public $ExporterCode;
 
     /**
      * Exporter ID
-     * 
+     *
      * @var string
      */
     public $ExporterID;
 
     /**
      * Export license info
-     * 
+     *
      * @var string
      */
     public $ExportLicense;
 
     /**
      * Export Reason
-     * 
+     *
      * @var string
      */
     public $ExportReason;
 
     /**
      * Consignee import license
-     * 
+     *
      * @var string
      */
     public $ImportLicense;
@@ -57,7 +57,7 @@ class ExportDeclaration
     /**
      * Invoice date
      * This field is mandatory when RequestDHLCustomsInvoice = 'Y'.
-     * 
+     *
      * @var string
      */
     public $InvoiceDate;
@@ -65,35 +65,35 @@ class ExportDeclaration
     /**
      * Invoice number
      * This field is mandatory when RequestDHLCustomsInvoice = 'Y'.
-     * 
+     *
      * @var string
      */
     public $InvoiceNumber;
 
     /**
      * Package marks
-     * 
+     *
      * @var string
      */
     public $PackageMarks;
 
     /**
      * Payer GST VAT details
-     * 
+     *
      * @var string
      */
     public $PayerGSTVAT;
 
     /**
      * Recipient reference
-     * 
+     *
      * @var string
      */
     public $RecipientReference;
 
     /**
      * Terms of payment
-     * 
+     *
      * @var string
      */
     public $TermsOfPayment;

@@ -6,28 +6,28 @@ class LabelBarcode
 {
     /**
      * Barcode number
-     * 
+     *
      * @var string
      */
     public $BarcodeNumber;
 
     /**
      * The Symbology code for this barcode is 128
-     * 
+     *
      * @var string
      */
     public $BarcodeType;
 
     /**
      * Barcode content
-     * 
+     *
      * @var string
      */
     public $BarcodeContent;
 
     /**
      * Text below barcode
-     * 
+     *
      * @var string
      */
     public $TextBelowBarcode;

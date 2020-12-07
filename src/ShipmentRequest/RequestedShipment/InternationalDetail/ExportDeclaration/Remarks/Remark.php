@@ -6,7 +6,7 @@ class Remark
 {
     /**
      * Custom Invoice's Remarks Description maximum of 3
-     * 
+     *
      * @var string
      */
     public $RemarkDescription;

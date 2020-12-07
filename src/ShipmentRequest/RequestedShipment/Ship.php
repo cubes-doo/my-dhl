@@ -1,12 +1,13 @@
 <?php
 
 namespace Cubes\MyDhl\ShipmentRequest\RequestedShipment;
+
 use Cubes\MyDhl\ShipmentRequest\RequestedShipment\Ship\{
-    Shipper,
-    Pickup,
     BookingRequestor,
     Buyer,
-    Recipient
+    Pickup,
+    Recipient,
+    Shipper
 };
 
 class Ship

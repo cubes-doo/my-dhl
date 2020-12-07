@@ -11,7 +11,7 @@ class BespokeLabelData
 {
     /**
      * The additional customer description
-     * 
+     *
      * @var string
      */
     public $LabelDescription;

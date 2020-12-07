@@ -25,14 +25,14 @@ class RegistrationNumber
 
     /**
      * Registration Number of the Shipper.
-     * 
+     *
      * @var string
      */
     public $Number;
 
     /**
      * Type of the registration number.
-     * 
+     *
      * Possible values:
      * + 'VAT', Value-Added tax
      * + 'EIN', Employer Identifiaction Number
@@ -52,15 +52,15 @@ class RegistrationNumber
      * + 'OKPO'
      * + 'MRN', Germany Movement Reference Number
      * + 'OSR', Overseas Registered Supplier GST number
-     * 
+     *
      * @var string
      */
     public $NumberTypeCode;
 
     /**
-     * ISO 2 character code of the country where 
+     * ISO 2 character code of the country where
      * the Registration Number has been issued by.
-     * 
+     *
      * @var string
      */
     public $NumberIssuerCountryCode;
