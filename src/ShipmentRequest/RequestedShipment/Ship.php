@@ -35,10 +35,10 @@ class Ship
 
     public function __construct(
         Shipper $Shipper,
-        Pickup $Pickup,
-        BookingRequestor $BookingRequestor,
-        Buyer $Buyer,
-        Recipient $Recipient
+        Recipient $Recipient,
+        Pickup $Pickup = null,
+        BookingRequestor $BookingRequestor = null,
+        Buyer $Buyer = null
     ) {
         $this->Shipper = $Shipper;
         $this->Pickup = $Pickup;

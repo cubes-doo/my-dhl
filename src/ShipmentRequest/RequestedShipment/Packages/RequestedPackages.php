@@ -142,7 +142,7 @@ class RequestedPackages
         $Weight,
         $CustomerReferences,
         Dimensions $Dimensions,
-        BespokeLabelData $BespokeLabelData,
+        BespokeLabelData $BespokeLabelData = null,
         $InsuredValue = null,
         $UseOwnPieceIdentificationNumber = null,
         $PieceIdentificationNumber = null,

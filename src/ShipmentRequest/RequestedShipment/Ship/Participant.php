@@ -34,8 +34,8 @@ class Participant
     public function __construct(
         Contact $Contact,
         Address $Address,
-        RegistrationNumbers $RegistrationNumbers,
-        BankDetails $BankDetails
+        RegistrationNumbers $RegistrationNumbers = null,
+        BankDetails $BankDetails = null
     ) {
         $this->Contact = $Contact;
         $this->Address = $Address;

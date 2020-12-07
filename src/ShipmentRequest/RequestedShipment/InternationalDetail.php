@@ -34,7 +34,7 @@ class InternationalDetail
     public function __construct(
         $Content,
         Commodities $Commodities,
-        ExportDeclaration $ExportDeclaration
+        ExportDeclaration $ExportDeclaration = null
     ) {
         $this->Content = $Content;
         $this->Commodities = $Commodities;
