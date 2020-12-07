@@ -93,7 +93,7 @@ class Address
         $City,
         $PostalCode,
         $CountryCode,
-        $StreetLines = null,
+        $StreetLines,
         $StreetName = null,
         $BuildingName = null,
         $StreetNumber = null,
