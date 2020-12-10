@@ -5,6 +5,7 @@ namespace Cubes\MyDhl;
 
 use Cubes\MyDhl\RateRequest\RateRequest;
 use Cubes\MyDhl\ShipmentRequest\ShipmentRequest;
+use Cubes\MyDhl\ShipmentDeleteRequest\ShipmentDeleteRequest;
 
 class MyDhl
 {
@@ -104,6 +105,21 @@ class MyDhl
 
         try {
             $res = $client->createShipmentRequest($request);
+            $this->log($client);
+        } catch (\SoapFault $s) {
+            $this->log($client, $s);
+            throw new \Exception('SoapFault: ' . $s->getMessage());
+        }
+        
+        return $res;
+    }
+
+    public function deleteShipmentRequest(ShipmentDeleteRequest $request)
+    {
+        $client = $this->make('expressRateBook');
+
+        try {
+            $res = $client->deleteShipmentRequest($request);
             $this->log($client);
         } catch (\SoapFault $s) {
             $this->log($client, $s);
