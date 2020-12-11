@@ -19,10 +19,12 @@ class Client extends \SoapClient
         $attr_ns = $dom->createAttribute('number');
         $attr_ns->value = 1;
 
-        $dom
-            ->getElementsByTagName('RequestedPackages')
-            ->item(0)
-            ->appendChild($attr_ns);
+        if(!empty($dom->getElementsByTagName('RequestedPackages')->item(0))) {
+            $dom
+                ->getElementsByTagName('RequestedPackages')
+                ->item(0)
+                ->appendChild($attr_ns);
+        }
 
         $request = $dom->saveXML();
 
