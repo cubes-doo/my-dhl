@@ -11,7 +11,7 @@ Unofficial SDK for the MyDHL API
 |-----------------------  |:---------:|
 | `RateRequest`           |     ✅    |
 | `ShipmentRequest`       |     ✅    |
-| `ShipmentDeleteRequest` |     ❌    |
+| `ShipmentDeleteRequest` |     ✅    |
 | `TrackingRequest`       |     ❌    |
 | `DocumentRetrieve`      |     ❌    |
 | `updateShipment`        |     ❌    |
@@ -30,6 +30,7 @@ composer require cubes-doo/my-dhl
 
 1. [RateRequest](src/RateRequest/README.md)
 1. [ShipmentRequest](src/ShipmentRequest/README.md)
+1. [ShipmentDeleteRequest](src/ShipmentDeleteRequest/README.md)
 
 :warning: **Things to keep in mind in general**:
 
