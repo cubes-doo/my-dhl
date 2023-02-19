@@ -34,7 +34,7 @@ class MyDhl
                 $this->password
             );
 
-        $options = null;
+        $options = [];
         if ($this->debug) {
             $options = [
                 'trace' => 1,
